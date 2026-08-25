@@ -47,7 +47,7 @@ const WORK_ITEMS = [
   {
     id: 6,
     asset: "/images/selected-work/selected-work-06.jpeg",
-    title: "The Studio Run",
+    title: "The Agency Run",
     label: "PRODUCTION • VIDEO",
     type: "PRODUCTION",
     aspect: "aspect-square",

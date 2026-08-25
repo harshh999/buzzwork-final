@@ -7,6 +7,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Playfair Display", Georgia, serif;
   --color-buzz-bg: #f7f6f2;
   --color-buzz-ink: #111111;
   --color-buzz-muted: #6b6a63;
@@ -240,3 +241,33 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Custom layered gallery composition variables mapping */
+@utility gallery-card {
+  --x: var(--x-xs, 0px);
+  --y: var(--y-xs, 0px);
+  --r: var(--r-xs, 0deg);
+  --z: var(--z-xs, 1);
+  
+  z-index: var(--z);
+  transform: translate3d(calc(-50% + var(--x)), var(--y), 0) rotate(var(--r));
+}
+
+@media (min-width: 640px) {
+  .gallery-card {
+    --x: var(--x-md, var(--x-xs, 0px));
+    --y: var(--y-md, var(--y-xs, 0px));
+    --r: var(--r-md, var(--r-xs, 0deg));
+    --z: var(--z-md, var(--z-xs, 1));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-card {
+    --x: var(--x-lg, var(--x-md, var(--x-xs, 0px)));
+    --y: var(--y-lg, var(--y-md, var(--y-xs, 0px)));
+    --r: var(--r-lg, var(--r-md, var(--r-xs, 0deg)));
+    --z: var(--z-lg, var(--z-md, var(--z-xs, 1)));
+  }
+}
+

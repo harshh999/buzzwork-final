@@ -9,6 +9,7 @@ import { ServicesTicker } from "@/components/sections/services-ticker";
 import { Work } from "@/components/sections/work";
 import { Services } from "@/components/sections/services";
 import { About } from "@/components/sections/about";
+import { TrustedBy } from "@/components/sections/trusted-by";
 import { Contact } from "@/components/sections/contact";
 import { PaperGrain } from "@/components/common/creative-accents";
 import { ContinuousEditorialLine } from "@/components/common/continuous-line";
@@ -82,6 +83,7 @@ function BuzzworkLanding() {
         <Work />
         <Services />
         <About />
+        <TrustedBy />
         <Contact />
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FadeIn } from "@/components/common/fade-in";
 import { SectionLabel } from "@/components/common/section-label";
 import { YellowButton } from "@/components/common/yellow-button";
+import { Mail, Instagram } from "lucide-react";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
@@ -29,25 +30,27 @@ export function Contact() {
                     Email
                   </div>
                   <a
-                    className="mt-1 inline-block border-b border-transparent transition hover:border-[color:var(--color-buzz-yellow)]"
+                    className="mt-1 flex w-fit items-center gap-2 border-b border-transparent transition hover:border-[color:var(--color-buzz-yellow)] hover:text-[color:var(--color-buzz-ink)]"
                     href="mailto:buzzworkkk@gmail.com"
                   >
-                    buzzworkkk@gmail.com
+                    <Mail className="h-4 w-4" />
+                    <span>buzzworkkk@gmail.com</span>
                   </a>
                 </div>
 
                 <div>
                   <div className="text-[12px] uppercase tracking-[0.18em] text-[color:var(--color-buzz-muted)]">
-                    Elsewhere
+                    Socials
                   </div>
                   <div className="mt-1 flex gap-5 text-[color:var(--color-buzz-muted)]">
                     <a
                       href="https://www.instagram.com/buzzworkkk_/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border-b border-transparent transition hover:border-[color:var(--color-buzz-yellow)] hover:text-[color:var(--color-buzz-ink)]"
+                      className="flex w-fit items-center gap-2 border-b border-transparent transition hover:border-[color:var(--color-buzz-yellow)] hover:text-[color:var(--color-buzz-ink)]"
                     >
-                      Instagram
+                      <Instagram className="h-4 w-4" />
+                      <span>@buzzworkkk_</span>
                     </a>
                   </div>
                 </div>
