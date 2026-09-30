@@ -112,10 +112,12 @@ export function Nav() {
 
   return (
     <>
-      <div 
+      <header 
         className="fixed top-0 left-0 w-full h-auto z-[100] pointer-events-none overflow-visible"
       >
-        <div 
+        <nav 
+          id="main-navigation"
+          aria-label="Main navigation"
           className="backdrop-blur-xl" 
           style={shellStyle}
         >
@@ -154,6 +156,7 @@ export function Nav() {
                 {NAV.map((item) => (
                   <li key={item.id}>
                     <button
+                      id={`nav-link-${item.id}`}
                       onClick={() => go(item.id)}
                       className="group relative rounded-full px-4.5 py-2 text-[13px] font-medium text-[#141414]/70 transition-colors hover:text-[#141414] cursor-pointer"
                     >
@@ -178,10 +181,11 @@ export function Nav() {
               {/* Desktop CTA */}
               <div className="hidden md:block">
                 <button
+                  id="nav-lets-talk-cta"
                   onClick={() => go("contact")}
                   className="inline-flex items-center justify-center rounded-full bg-[#141414] px-5 py-2 text-[13px] font-medium text-white shadow-sm transition-all duration-300 hover:bg-black hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                 >
-                  Lets Talk →
+                  Let's Talk →
                 </button>
               </div>
 
@@ -208,8 +212,8 @@ export function Nav() {
               </button>
             </div>
           </div>
-        </div>
-      </div>
+        </nav>
+      </header>
 
       {/* Mobile Premium Menu Overlay */}
       <AnimatePresence>

@@ -50,7 +50,7 @@ function ContactPage() {
       <PaperGrain />
       <ContinuousEditorialLine />
       <Nav />
-      <main className="relative z-10 pt-16 sm:pt-20">
+      <main className="relative z-10 pt-20 sm:pt-28">
         <Contact />
       </main>
       <Footer />
